@@ -148,11 +148,8 @@ strong {
   height: auto;
 }
 
-#research > div > :not(.research-thumb) {
+#research > div > .research-proj-title,
+#research > div > p {
+  display: block;
   flex: 1;
-}
-
-.research-proj-title {
-    color: var(--blue1);
-    font-weight: 400;
 }
