@@ -148,8 +148,8 @@ strong {
 
 /* 3. 文字区：占剩余 73%，并允许收缩（不要被最小内容宽度撑破） */
 .research-detail {
-  flex: 0 0 53%;
-  min-width: 0;      /* ← 关键：允许它收缩，腾出空间给图片 */
+  flex: 1 1 auto;   /* 或者写 flex: 0 0 58% 也行 */
+  min-width: 0;     /* ← 关键：解除最小内容宽度，腾出空间给图片 */
   display: flex;
   flex-direction: column;
   gap: 0.3em;
