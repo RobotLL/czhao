@@ -156,9 +156,10 @@ strong {
 /* 各个子元素的样式（可选微调） */
 .research-proj-title {
   color: var(--blue1);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.05em;
   line-height: 1.3em;
+  line-width: 100em;
   white-space: normal;        /* 允许换行 */
   word-break: break-word;     /* 需要时单词内断行 */
 }
