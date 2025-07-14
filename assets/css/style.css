@@ -127,16 +127,18 @@ strong {
     border-bottom: 1px solid #ddd;
 }
 
-/* 外层条目：左右两栏，垂直居中 */
+/* 1. 条目整体：左右两栏，文字顶对齐图片顶部 */
 .research-entry {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-start;  /* 保证文字第一行顶对齐 */
+  width: 100%;              /* 撑满外层容器 */
+  margin-bottom: 2.5em;
 }
 
-/* 缩略图：固定宽度，不被压缩 */
+/* 2. 缩略图：固定占容器宽度的 25% */
 .research-thumb {
-  flex: 0 0 25%;    /* 缩略图固定占父容器宽度的 25% */
-  margin-right: 2%; /* 与右侧详情区留出一点空隙，2% 亦可按需微调 */
+  flex: 0 0 25%;   /* 占 1/4 */
+  margin-right: 2%;/* 留点空隙 */
 }
 .research-thumb img {
   display: block;
@@ -144,31 +146,35 @@ strong {
   height: auto;
 }
 
-/* 详情区：纵向排列，占剩余约 73% */
+/* 3. 文字区：占剩余 73%，并允许收缩（不要被最小内容宽度撑破） */
 .research-detail {
+  flex: 0 0 73%;
+  min-width: 0;      /* ← 关键：允许它收缩，腾出空间给图片 */
   display: flex;
   flex-direction: column;
   gap: 0.3em;
-  flex: 1 1 73%;
-  min-width: 0; 
 }
 
-/* 各个子元素的样式（可选微调） */
+/* ---- 微调标题和段落 ---- */
 .research-proj-title {
   color: var(--blue1);
   font-weight: 500;
   font-size: 1.05em;
   line-height: 1.3em;
-  white-space: normal;        /* 允许换行 */
-  word-break: break-word;     /* 需要时单词内断行 */
+  white-space: normal;
+  word-break: break-word;
+  margin: 0;          /* 去掉默认 p/margin */
 }
+
 .research-authors,
 .research-venue,
 .research-links {
-  color: var(--grey);
-  font-size: 0.95em;
   margin: 0;
+  font-size: 0.95em;
+  color: var(--grey);
 }
+
 .research-links a {
   color: var(--pink1);
 }
+
