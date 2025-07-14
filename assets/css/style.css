@@ -137,7 +137,7 @@ strong {
 
 /* 2. 缩略图：固定占容器宽度的 25% */
 .research-thumb {
-  flex: 0 0 25%;   /* 占 1/4 */
+  flex: 0 0 40%;   /* 占 1/4 */
   margin-right: 2%;/* 留点空隙 */
 }
 .research-thumb img {
@@ -148,7 +148,7 @@ strong {
 
 /* 3. 文字区：占剩余 73%，并允许收缩（不要被最小内容宽度撑破） */
 .research-detail {
-  flex: 0 0 73%;
+  flex: 0 0 53%;
   min-width: 0;      /* ← 关键：允许它收缩，腾出空间给图片 */
   display: flex;
   flex-direction: column;
