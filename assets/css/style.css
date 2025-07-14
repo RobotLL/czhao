@@ -138,7 +138,7 @@ strong {
 /* 2. 缩略图：固定占容器宽度的 25% */
 .research-thumb {
   flex: 0 0 30%;   /* 占 1/4 */
-  margin-right: 2%;/* 留点空隙 */
+  margin-right: 4%;/* 留点空隙 */
 }
 .research-thumb img {
   display: block;
