@@ -127,29 +127,46 @@ strong {
     border-bottom: 1px solid #ddd;
 }
 
-#research > div {
+/* 外层条目：左右两栏，垂直居中 */
+.research-entry {
   display: flex;
   align-items: center;
-  gap: 2em; /* 图和文字之间的间距 */
   margin-bottom: 2.5em;
-  clear: both;  /* 防止浮动造成错位 */
 }
 
+/* 缩略图：固定宽度，不被压缩 */
 .research-thumb {
-  flex-shrink: 0;
-  width: 12em;
-  height: auto;
-  margin: 0;
-  padding: 0;
+  flex: 0 0 12em;
+  margin-right: 1.5em;
 }
-
 .research-thumb img {
+  display: block;
   width: 100%;
   height: auto;
 }
 
-#research > div > .research-proj-title,
-#research > div > p {
-  display: block;
+/* 详情区：纵向排列 */
+.research-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
   flex: 1;
+}
+
+/* 各个子元素的样式（可选微调） */
+.research-proj-title {
+  color: var(--blue1);
+  font-weight: 500;
+  font-size: 1.05em;
+  line-height: 1.3em;
+}
+.research-authors,
+.research-venue,
+.research-links {
+  color: var(--grey);
+  font-size: 0.95em;
+  margin: 0;
+}
+.research-links a {
+  color: var(--pink1);
 }
