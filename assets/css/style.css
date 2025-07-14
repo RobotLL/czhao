@@ -136,8 +136,8 @@ strong {
 
 /* 缩略图：固定宽度，不被压缩 */
 .research-thumb {
-  flex: 0 0 12em;
-  margin-right: 1.5em;
+  flex: 0 0 20em;
+  margin-right: 5em;
 }
 .research-thumb img {
   display: block;
