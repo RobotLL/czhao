@@ -131,12 +131,11 @@ strong {
 .research-entry {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 2.5em;
 }
 
 /* 缩略图：固定宽度，不被压缩 */
 .research-thumb {
-  flex: 0 0 35%;    /* 缩略图固定占父容器宽度的 25% */
+  flex: 0 0 25%;    /* 缩略图固定占父容器宽度的 25% */
   margin-right: 2%; /* 与右侧详情区留出一点空隙，2% 亦可按需微调 */
 }
 .research-thumb img {
@@ -150,7 +149,8 @@ strong {
   display: flex;
   flex-direction: column;
   gap: 0.3em;
-  flex: 1 1 63%;
+  flex: 1 1 73%;
+  min-width: 0; 
 }
 
 /* 各个子元素的样式（可选微调） */
